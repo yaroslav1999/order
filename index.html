@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Task1</title>
+</head>
+<body>
+    <form method="GET" class="order">
+        <fieldset>
+            <legend>Контактная информация</legend>
+            <div>
+                <label for="name">Имя:</label>
+                <input required placeholder="Как вас зовут?" type="text" id="name" name="name"/>
+            </div>
+            <div>
+                <label for="city">Город:</label>
+                <input required list="cities" id="city" name="city" />
+                <datalist id="cities">
+                    <option value="Славянск">
+                    <option value="Краматорск">
+                    <option value="Николаевка">
+                    <option value="Дружковка">
+                    <option value="Константиновка">
+                </datalist>
+            </div>
+            <div>
+                <label for="addr">Адрес:</label>
+                <input required placeholder="Улица, дом/квартира" type="text" id="addr" name="addr"/>
+            </div>
+            <div>
+                <label for="tel">Телефон:</label>
+                <input required placeholder="050 1234567" type="number" id="tel" name="tel"/>
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input placeholder="Ваш email" type="email" id="email" name="email"/>
+            </div>
+
+        </fieldset>
+        <fieldset>
+            <legend>Заказ</legend>
+            <div>
+                <label for="dish">Хочу:</label>
+                <select required id="dish" name="dish">
+                    <option>Суши лосось</option>
+                    <option>Суши криветка</option>
+                    <option>Суши тунец</option>
+                    <option>Суши с чукой</option>
+                    <option>Суши с крабом</option>
+                </select>
+            </div>
+            <div>
+                <p>Палочки:</p>
+                <input checked type="radio" value="profi" id="profi" name="stiks">
+                <label for="profi">Обычные</label>
+                <input type="radio" value="student" id="student" name="stiks">
+                <label for="student">Ученические</label>
+            </div>
+            <div>
+                <label for="sticksNumber">Количество:</label>
+                <input min='0' max='15' value='1' placeholder="1" type="number" id="sticksNumber" name="sticksNumber"/>
+            </div>
+            <div>
+                <label for="napkins">Положить салфетки:</label>
+                <input checked type="checkbox" id="napkins" name="napkins" />
+            </div>
+            <div>
+                <label for="message">Коментарий:</label>
+                <textarea id="message" name="message"></textarea>
+            </div>
+        </fieldset>
+        <div class="btnholder">
+            <input type="submit" value="Оформить заказ" id='submitBtn'>
+            <input type="reset" value="Очистить форму" id='resetBtn'>
+        </div>
+    </form>
+</body>
+</html>
